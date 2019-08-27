@@ -21,6 +21,7 @@ import javax.persistence.TemporalType;
 
 import org.springframework.stereotype.Component;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "EMPLOYEE")
 public class Employee implements Serializable{
@@ -128,7 +129,7 @@ public class Employee implements Serializable{
 	@Override
 	public String toString() {
 		return "Employee [empId=" + empId + ", firstName=" + firstName + ", lastName=" + lastName + ", startDate="
-				+ startDate + "]";
+				+ startDate + "]  ||  ";
 	}
 
 }
