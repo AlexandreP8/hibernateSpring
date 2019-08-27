@@ -23,7 +23,6 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Table(name = "EMPLOYEE")
-@Component("employee")
 public class Employee implements Serializable{
 	
 	private Integer empId;	

@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 
 @Entity
 @Table(name = "DEPARTMENT")
-@Component("department")
+
 public class Department implements Serializable{
 
 	private Integer deptId;

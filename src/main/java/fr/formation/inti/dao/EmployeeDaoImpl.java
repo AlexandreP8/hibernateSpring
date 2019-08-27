@@ -8,6 +8,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Component;
 
 import fr.formation.inti.entities.Employee;
 import fr.formation.inti.utils.HibernateUtils;
@@ -21,6 +22,7 @@ import fr.formation.inti.utils.HibernateUtils;
  * @author 
  *
  */
+@Component("empDao")
 public class EmployeeDaoImpl implements IEmployeeDao {
 	private Session currentSession;
 	private Transaction currentTransaction;

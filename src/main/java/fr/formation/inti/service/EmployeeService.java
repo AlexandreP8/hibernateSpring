@@ -2,9 +2,11 @@ package fr.formation.inti.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import fr.formation.inti.dao.EmployeeDaoImpl;
 import fr.formation.inti.entities.Employee;
-
+@Component("employeeService")
 public class EmployeeService {
 	
 	private static EmployeeDaoImpl dao;

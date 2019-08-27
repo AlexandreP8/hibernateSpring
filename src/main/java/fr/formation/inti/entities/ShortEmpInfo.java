@@ -2,7 +2,6 @@ package fr.formation.inti.entities;
 
 import org.springframework.stereotype.Component;
 
-@Component("ShortEmpInfo")
 public class ShortEmpInfo {
  
     private Integer empId;
