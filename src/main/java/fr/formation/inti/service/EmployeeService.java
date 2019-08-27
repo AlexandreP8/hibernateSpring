@@ -3,27 +3,21 @@ package fr.formation.inti.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import fr.formation.inti.dao.EmployeeDaoImpl;
-import fr.formation.inti.dao.IEmployeeDao;
 import fr.formation.inti.entities.Employee;
 
 @Component("service")
 public class EmployeeService {
 	
 	@Autowired
-	private static IEmployeeDao dao;
+	private static EmployeeDaoImpl dao;
 	
+	public EmployeeService() {
+	System.out.println("◘EmployeeService Constructor◘");
+	}
 	
-	
-//	public EmployeeService() {
-//		dao = new EmployeeDaoImpl();
-//	}
-	
-	@Autowired
-	@Qualifier("session")
 	public void persist(Employee e) {
         dao.openCurrentSessionwithTransaction();
         dao.persist(e);
@@ -62,8 +56,6 @@ public class EmployeeService {
         dao.closeCurrentSession();
         return employees;
     }
- 
-    
  
     public EmployeeDaoImpl EmployeeDao() {
         return dao;
