@@ -2,8 +2,11 @@ package fr.formation.inti.dao;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import fr.formation.inti.entities.Employee;
 
+@Component("empDao")
 public interface IEmployeeDao {
 
 	

@@ -22,7 +22,7 @@ import fr.formation.inti.utils.HibernateUtils;
  * @author 
  *
  */
-@Component("empDao")
+@Component("empDaoImpl")
 public class EmployeeDaoImpl implements IEmployeeDao {
 	private Session currentSession;
 	private Transaction currentTransaction;
